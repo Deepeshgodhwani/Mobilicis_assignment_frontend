@@ -4,6 +4,23 @@
 
 
 
+th{
+    text-align: start;
+}
+
 th ,td {
     padding: 10px;
+}
+
+option{
+    background-color: lightgrey;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+select{
+    background-position: calc(100% - 0.75rem) center !important;
+    
 }
