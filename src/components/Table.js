@@ -4,7 +4,7 @@ function Table(props) {
   const { users, query } = props;
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex  flex-col ">
       <table>
         <thead>
           {query !== "query5" ? (

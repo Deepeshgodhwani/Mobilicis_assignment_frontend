@@ -10,7 +10,7 @@ function Header(props) {
   };
 
   return (
-    <div className="flex justify-between px-10 h-10 items-center ">
+    <div className="flex header justify-between px-10 h-10 items-center ">
       <div className="bg-black rounded-full  w-14 h-14 flex justify-center items-center">
         {" "}
         <img src={logo} alt="logo" className="w-10"></img>

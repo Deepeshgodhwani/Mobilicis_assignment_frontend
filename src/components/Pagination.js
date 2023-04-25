@@ -14,7 +14,7 @@ function Paginationn(props) {
       roundoff += 1;
     }
     setcount(roundoff);
-    console.log(data);
+    
     setusers(data.slice(0, 11));
     setpage(1);
   }, [data]);
@@ -27,7 +27,7 @@ function Paginationn(props) {
   }, [page]);
 
   return (
-    <div className="flex justify-end  pr-10">
+    <div className="flex pagi justify-end  pr-10">
       <div className="bg-[rgb(255,204,141)] px-3 py-1 rounded-xl">
         <Pagination
           onChange={(e, value) => {
