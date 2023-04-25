@@ -14,26 +14,30 @@ function Paginationn(props) {
       roundoff += 1;
     }
     setcount(roundoff);
-    setusers(data.slice(0,11))
+    console.log(data);
+    setusers(data.slice(0, 11));
+    setpage(1);
   }, [data]);
 
   useEffect(() => {
-     let end=page*11;
-     let start=end-11;
-     
-     setusers(data.slice(start,end))
+    let end = page * 11;
+    let start = end - 11;
 
+    setusers(data.slice(start, end));
   }, [page]);
 
   return (
     <div className="flex justify-end  pr-10">
-      <Pagination
-        onChange={(e, value) => {
-          setpage(value);
-        }}
-        count={count}
-        color="primary"
-      />
+      <div className="bg-[rgb(255,204,141)] px-3 py-1 rounded-xl">
+        <Pagination
+          onChange={(e, value) => {
+            setpage(value);
+          }}
+          page={page}
+          count={count}
+          variant="outlined"
+        />
+      </div>
     </div>
   );
 }

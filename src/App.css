@@ -6,21 +6,54 @@
 
 th{
     text-align: start;
+    
 }
+
 
 th ,td {
     padding: 10px;
+   
+    
+    color: rgb(255,255,243);
 }
 
 option{
-    background-color: lightgrey;
-    color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+    background-color: rgb(255,180,86);
+    color: white;
 }
 
+
+option:hover{
+    background-color: rgb(245, 189, 121) ;
+}
 select{
     background-position: calc(100% - 0.75rem) center !important;
+    
+}
+
+
+
+.blink-bg{
+   
+    animation: blinkingBackground 2s infinite;
+}
+@keyframes blinkingBackground{
+    0%		{ background-color: rgb(27, 27, 27);}
+    50%		{ background-color: rgb(72, 72, 72);}
+    100%    { background-color:rgb(27, 27, 27);}
+    
+}
+
+  
+.blink-img{
+    animation: blinkingImage 2s infinite;
+}
+
+
+
+@keyframes blinkingImage{
+    0%		{ opacity: 0.20;}
+    50%		{ opacity: 0.80;}
+    100%    { opacity: 0.20;}
     
 }

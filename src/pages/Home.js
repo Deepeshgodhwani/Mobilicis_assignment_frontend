@@ -4,12 +4,11 @@ import { request } from "../api/request";
 import Pagination from "../components/Pagination";
 import Header from "../components/Header";
 
-function Home() {
+function Home(props) {
+  const { loading, setloading } = props;
   const [data, setdata] = useState([]);
   const [users, setusers] = useState([]);
-  const [loading, setloading] = useState(true);
-  const [query, setquery] = useState('query1');
- 
+  const [query, setquery] = useState("query1");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,15 +17,14 @@ function Home() {
         setdata(response.data);
       }
     };
-
     fetchData();
   }, [query]);
 
   return (
-    <div className="py-6 text-white  flex gap-y-4 p-2 flex-col ">
-      <Header setquery={setquery}/>
-      <Table users={users} query={query}/>
-      <Pagination data={data} setusers={setusers} />
+    <div className="py-4 text-white px-4   flex gap-y-4  flex-col ">
+      <Header setquery={setquery} />
+      <Table users={users} query={query} loading={loading} />
+      {data.length > 0 && <Pagination data={data} setusers={setusers} />}
     </div>
   );
 }
